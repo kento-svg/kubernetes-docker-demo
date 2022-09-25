@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo8-np
+spec:
+  selector:
+    app: demo8
+  ports:
+  - port: 8081
+  type: NodePort

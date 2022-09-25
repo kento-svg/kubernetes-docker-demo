@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo8-deployment
+  labels:
+    app: demo8
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo8
+  template:
+    metadata:
+      labels:
+        app: demo8
+    spec:
+      containers:
+        - name: demo8
+          image: localhost:30005/test/demo8:1.0.0
