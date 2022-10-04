@@ -1,10 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo8-np
+  creationTimestamp: null
+  labels:
+    app: demo8
+  name: demo8
 spec:
+  ports:
+  - name: "8081"
+    port: 8081
+    protocol: TCP
+    targetPort: 8081
   selector:
     app: demo8
-  ports:
-  - port: 8081
-  type: NodePort
+  type: ClusterIP
+status:
+  loadBalancer: {}
