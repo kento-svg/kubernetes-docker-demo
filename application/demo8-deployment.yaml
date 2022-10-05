@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: demo8
-          image: localhost:30003/test/demo8:2.0.0
+          image: localhost:30003/test/demo8:4.0.0
